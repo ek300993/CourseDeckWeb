@@ -142,6 +142,9 @@ header.site .wrap {
 }
 
 @media (max-width: 640px) {
+  .wrap {
+    padding: 0 20px;
+  }
   .hero h1 {
     font-size: 32px;
   }
@@ -248,7 +251,8 @@ footer.site nav a:first-child {
 }
 
 .legal main {
-  padding: 56px 0 80px;
+  padding-top: 56px;
+  padding-bottom: 80px;
 }
 
 .legal h1 {
