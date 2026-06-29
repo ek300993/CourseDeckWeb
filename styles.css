@@ -1,0 +1,280 @@
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f5f5ff;
+  --text: #14151a;
+  --text-dim: #6b6d76;
+  --accent: #626aff;
+  --accent-text: #ffffff;
+  --accent-soft: rgba(98, 106, 255, 0.1);
+  --border: rgba(20, 21, 26, 0.08);
+  --max-width: 880px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header.site {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--text);
+}
+
+.brand img {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+}
+
+.hero {
+  padding: 88px 0 64px;
+  text-align: center;
+}
+
+.hero img.icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  margin-bottom: 28px;
+  box-shadow: 0 12px 32px rgba(98, 106, 255, 0.25);
+}
+
+.hero h1 {
+  font-size: 44px;
+  line-height: 1.15;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.hero p.tagline {
+  font-size: 19px;
+  color: var(--text-dim);
+  max-width: 540px;
+  margin: 0 auto 32px;
+}
+
+.cta-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+.btn-primary:hover {
+  background: #4f57e0;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.section-title {
+  font-size: 28px;
+  text-align: center;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.section-sub {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 16px;
+  max-width: 480px;
+  margin: 0 auto 40px;
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+section.pricing {
+  padding: 0 0 88px;
+}
+
+.compare-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+table.compare {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+}
+
+table.compare th,
+table.compare td {
+  padding: 14px 18px;
+  text-align: center;
+  font-size: 14.5px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+table.compare th.feature-col,
+table.compare td.feature-col {
+  text-align: left;
+  white-space: normal;
+}
+
+table.compare td.feature-col {
+  color: var(--text);
+}
+
+table.compare tbody tr:last-child td {
+  border-bottom: none;
+}
+
+table.compare thead th {
+  padding-top: 20px;
+  padding-bottom: 16px;
+}
+
+table.compare th.plan-pro,
+table.compare td.plan-pro-cell {
+  background: var(--accent-soft);
+}
+
+.plan-name {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.plan-price {
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+table.compare .check {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+table.compare .dash {
+  color: var(--text-dim);
+}
+
+p.note {
+  color: var(--text-dim);
+  font-size: 13.5px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer.site {
+  border-top: 1px solid var(--border);
+  padding: 32px 0 48px;
+  color: var(--text-dim);
+  font-size: 13.5px;
+}
+
+footer.site .wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+footer.site nav a {
+  color: var(--text-dim);
+  margin-left: 18px;
+}
+
+footer.site nav a:first-child {
+  margin-left: 0;
+}
+
+.legal main {
+  padding: 56px 0 80px;
+}
+
+.legal h1 {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.legal .updated {
+  color: var(--text-dim);
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.legal h2 {
+  font-size: 19px;
+  margin-top: 36px;
+}
+
+.legal ul {
+  color: var(--text-dim);
+}
+
+.legal p {
+  color: var(--text-dim);
+}
+
+.legal li {
+  margin-bottom: 6px;
+}
